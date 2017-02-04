@@ -1,0 +1,237 @@
+0.7.13
+- Fixes:
+  - Fix app won't start if config file is empty
+  - Use 'Save as' dialog for save action if project doesn't fully open
+    - E.g. 'Cancel' was pressed before all files were imported
+- General:
+  - Only center progress dialogs on parent if not manually moved by user
+  - Use more custom message dialogs
+  - Show confirmation dialog in Quick Build when overwriting file
+  - Files can be dropped onto some text areas from system file manager
+    - Equivalent to opening file's contents into text area
+  - Menu option: Options ➜ Update dist names cache
+    - Attempts to retrieve list of dist names for changelog
+  - Removed custom open/save dialogs
+- License templates generation:
+  - Full license templates can be generated
+  - License templates shipped with app:
+    - BSD-2-Clause
+    - BSD-4-Clause
+    - BSL-1.0
+    - CC0
+    - EPL-1.0
+    - ISC
+    - MIT-X
+    - OFL-1.1
+    - Zlib-PNG
+  - Custom license templates can be placed in user's "local" directory
+    - $HOME/.local/share/debreate/templates/licenses
+    - These take precedence over system & app templates
+- Files & folders:
+  - Drag & drop support added
+    - Files/Folders can be dragged from system file manager or directory tree
+  - Relative paths are preserved when adding directories to the file list
+  - Option to list only top-level directory or individual files in file list
+  - Directory tree changes:
+    - Executable files are displayed in red
+    - Some mime types use a unique bitmap icon
+    - Files/Folders can be renamed or moved to trash
+      - 'gvfs-trash' command required for trash
+    - Double-click action changes:
+      - Single selected file or multiple selected files/folders:
+        - Adds selection to file list
+      - Single selected folder expands contents
+    - Enter/Return keys have similar behavior to double-click
+    - Single "Add" option in context menu
+    - Folders can be expanded/collapsed from context menu
+      - Expand/Collapse menu only appears if all selected items are folders
+- Changelog formatting:
+  - Option to preserve indentation of regular lines
+  - Lines beginning with one of *, -, +, or # are added as new section
+- Build options:
+  - 'Create md5sums file' set to True by default
+  - New option to strip binary files before packaged (enabled by default)
+- Installation from .deb package:
+  - Added postinst script to compile source to Python bytecode
+
+0.7.12
+- Fixes:
+  - Added fixed & updated modules from unstable branch
+  - Fix first run window not closing
+  - Fix opening projects from command line
+  - Fix problems with add/remove/delete in dependency list
+  - Fix progress dialogs cannot be cancelled
+  - Fix Quick Build
+- Code Cleanup:
+  - Removed old/unused code & comments
+  - Removed some unused/deprecated modules & classes
+- New Features:
+  - About dialog:
+    - Displays system information (Python & wxPython versions)
+  - Added manpage
+  - Command line:
+    - 'legacy': Forces wx 2.8 if available
+    - 'compile': Compiles Python source files (.py) into bytecode (.pyc)
+    - 'clean': Removes compiled Python bytecode from Debreate directory
+    - '-h|--help': Displays output of 'man debreate'
+      - installed: Uses default manpath
+      - portable: Uses sub-directory man/man1
+    - '-v|--version': displays Debreate version
+    - '-l=|--log-level=': sets the logger verbosity
+      - Value can be one of 'info|0', 'warning|1', 'error|2', or 'debug|3'
+      - Default level is 'error' (2)
+    - '-i=|--log-interval=': is reserved for 0.8.0 (currently does nothing)
+  - Logger added for outputting messages to text log
+  - Menu options:
+    - Enable/Disable tooltips (wx 3.0 only)
+    - Open logs directory in system file manager
+      - requires 'xdg-open' command
+  - Page Build:
+    - Option to install packages after build uses gdebi
+      - 'gdebi-gtk' or 'gdebi-kde' command required
+  - Page Changelog:
+    - New 'urgency' options 'medium' & 'emergency'
+  - Page Control:
+    - Added 'arm64' to architectures
+  - Page Files:
+    - File import progress dialog shows task count
+    - File list can be refreshed
+      - Updates missing files status & executable status
+    - Missing files marked by red-orange background
+  - Page Menu/Launcher:
+    - Optionally use custom filename for menu launcher
+  - wx 3.0 compatibility for newer systems
+    - wx 2.8 compatibility is retained
+- Debreate Installation:
+  - Added Debian maintainer scripts for (un)installation
+    - postrm: Cleans up any residual files in /usr/share/debreate
+  - MIME type association for system "Open with..."
+    - .deb installation associates .dbp files (application/x-dbp)
+    - Icons for .dbp files added to Gnome icons directory
+- Misc:
+  - Added/Altered some helper scripts for source management
+    - add-changes: adds new changes to changelog
+    - scripts_globals: contains variables for other scripts
+    - update-debian-changelog:
+      - Merges changes from changelog into debian changelog
+    - update-locale: scans source & updates .pot & .po gettext files
+      - Optionally compiles .mo binaries if 'compile' argument is used
+    - update-version:
+      - Set version information using 'INFO' file
+  - Added 'open', 'save', & 'preview' buttons to depends page
+  - License changed to MIT (see docs/LICENSE.txt)
+  - Merged new about dialog from 'unstable' branch
+  - Merged some modules from 'unstable' branch
+  - Replace some confirmation dialogs with ConfirmationDialog class
+  - Replace some selection controls with check boxes
+  - Scripts' text input areas are disabled when unchecked
+  - Show which required fields are empty in build dialog
+  - Use custom hyperlink controls
+  - Use GitHub URL to check for updates
+  - Use monospaced font for some multi-line text input fields
+  - Use Python modules in place of some system calls
+  - Wizard buttons disable on first & last pages
+- Translations:
+  - Add Russian Gettext locale
+  - Update Spanish (es) Gettext locale
+
+0.7.11
+- Add template generation for copyright
+- Create generic Makefile
+- Increment version with 'update-version.py' script
+- Change some string formatting methods (use 'string.format()')
+
+0.7.10
+- Add fields to default paths in 'files' section
+- BUGFIX: Rename module "_md5" to "db_md5" to avoid required use of ".new()"
+- Initial debianized release
+
+0.7.9
+- Fixed _md5 module to work with older & newer versions of python
+
+0.7.8
+- Fixed bug: AttributeError: 'module' object has no attribute 'MD5'
+
+0.7.7
+- Fixed some incompatibilities with python 2.6
+
+0.7.6
+- Added log to build section
+- Removed summary from build section
+- Added option to check for update from Help menu
+- Added option to install package after build
+- Fixed some unicode problems in about dialog
+- Fixed more unicode problems in Files section
+- Fixed missing icon on first run dialog
+
+0.7.5
+- Fixed error creating changelog when spaces in build path
+- Fixed error creating deb when spaces in build path
+- Fixed unicode errors when saving project, control, and launcher
+- Fixed unicode erros when building deb
+- Added Quick Build option for building from preexisting tree
+
+0.7.4
+- File list is no longer editable
+- Fixed progress dialog freezes when adding empty directory to file list
+- Changed layout of Control section
+- Removed colors from certain text fields
+- Finished most of locale support
+- Removed convert to RPM
+- Fixed program frozen while help file open
+- Fixed error when starting fresh project
+
+0.7.3
+- Changed lintian tags explanation link
+- Added Ubuntu Policy Manual link
+- Added help documentation
+- Fixed error on save menu launcher file
+- Removed unnecessary fields from Control section
+
+0.7.2
+- Fixed build error caused by existing "doc" folder
+
+0.7.1
+- Changed config directory to ~/.config/debreate
+- Removed "mode" and "sounds" options
+- Added "Page" menu to switch between pages
+- Config file moved to ~/.config/debreate
+- Changed changelog.Debian.gz to changelog.gz
+- Error message for failed build from non-ASCII characters
+- Fixed opening and saving menu entry details
+
+0.7.0-0alpha6
+- Fixed: Opening reference links freezes application
+- Workaround: Hitting "Delete" removes dependencies
+- Fixed: About dialog, can't see link after click
+- Added partial language support
+- Added partial Spanish translation
+
+0.7.0-0alpha5
+- Checks for errors in produced .deb with lintian
+- Repairs file and executable permissions
+- Bug fix: Version field doesn't re-enable after changing modes
+- Changed "Section" default values to be in accordance
+      with Debian Policy Manual
+- Fixed changelog creation
+- Fixed text colors on Control page for dark themes
+- Put correct options in "Sections" under Control page
+- Fixed enabling/disabling some checkboxes if md5sum
+      and lintian aren't installed
+
+0.7.0-0alpha4
+- Fixed md5sums creaton
+- Fixed some packaging errors: changelog is compressed to changelog.Debian.gz
+- Added option to create copyright
+- Changed tabbed interface to wizard style
+- Added "debianize source" wizard
+
+0.7.0-0alpha3
+- Automatic date creation in changelog
+- Added support for changelog creation
+- bugfix: Can't save projects when files have sub-dir
+- Re-enabled md5sums
+- Enabled previewing .desktop (Menu) config
+- bugfix: Semi-colons in project files under Menu ➜ Categories
+- Changed "Type" field under "Menu" to be customizable
+- Added more functionality to custom save dialog

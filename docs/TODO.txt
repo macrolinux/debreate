@@ -1,0 +1,92 @@
+﻿Next Release:
+- Use names 'master', 'unstable' & 'stable' for main Git branches
+- Update gettext locales
+- Mark projects dirty when changed
+- Test that locales are working
+- Fix final build
+  - Fix md5sum binary read bug
+  - Organize md5sums list
+- Only show exit confirmation if project has been modified
+- Finish help dialog
+- Refactor & organize error messages on build
+- Fix bugs in docs/BUGS.txt
+- Heavy code cleanup & testing
+- Option to preview/edit control file at build time
+- Replace wx.MessageDialog with DetailedMessageDialog
+- Add custom field option to Control
+- Compile python scripts to byte code (.pyc) after install
+- Move Changelog page to second to last, before Build page
+- Move Menu/Launcher page to after Dependencies
+- Option to save session
+- Show dpkg output during build
+- Add MIME type section to menu/launcher
+- Show terminal output for dpkg & lintian commands
+- Add option for lintian overrides
+- Add 'quiet' log level
+- Replace 'debian' directory with script to automatically generate Debian build files
+- Add page for creating manpage
+- Add lintian overrides option
+- Add option to preserve/trip top-level directory in directory tree
+- Files page:
+  - 'List files individually' & 'Preserve top-level directories' should be saved to config
+
+Priority:
+- Use globals.thread module for all threading activity
+- Test if user's home directory listed twice in directory tree if mounted on separate partition
+- Files page: Optional filter for hidden files & folders
+- Add a 'help' button for info on each page
+- Finish Doxygen documentation
+- Allow editing of dependecies list
+- Finish Markdown parser
+- Add wizard to build packages from source
+  - Possibly use as a front-end for 'dh_make' & 'debuild'
+- Allow making multiple .desktop menus
+- Option to create lintian overrides file
+- Use 'data/lintian/tags' for overrides
+- Cache lintian tags list from remote site
+- Mark project dirty when lintian overrides are changed
+- Use datestamp for project save & build stage directories
+- Change category list to checkable list with option to add custom categories
+- Set/Save build page options with config file rather than project
+
+Non-priority:
+- Set up manpage template creation for executables in file list
+- Set custom images in imagelist.DirectoryImageList dynamically using bitmaps found in MIME directory
+- Add custom field option to Control
+- Add 'provides' field to Control
+- Add MIME type field to launcher/menu
+- Use custom buttons for template generation on Copyright page
+- Add option to eject removable drive from directory tree context menu
+- Config file should not be required to exist before launching main app window
+- Option for make/cmake to create portable release
+- Add option to build standalone installers
+- Auto-generate release notes for install from TODO & BUGS lists
+- Use Python's built-in module 'md5' for creating hashes
+- Startup window in primary monitor
+- Update missing path status in file list after selecting item
+- Add customizable filter for directory tree
+- Add refresh button on copyright page for updating templates list
+- Support multi-select for categories on launcher/menu page
+- Add alternate tooltip for 'strip' option if disabled
+- Add alternate tooltip for 'lintian' option if disabled
+- Add alternate tooltip for 'install' option if disabled
+- Don't show 'unknown error' if package build was cancelled
+- Detailed documentation on files page
+- Find alternative (if necessary) to sys.setdefaultencoding
+- Omit scripts directory in gettext search
+- Create FreeBSD Port
+- Save monospaced font size for text areas using it
+- Add contributers file to docs dir
+- Option to convert between package formats (alien?)
+- Replace Makefile with CMake build system
+- Set build page options from config, not project file
+- Option to remove debreate folders from /tmp directory
+
+Undecided:
+- Scripting backend
+- Plugin support for adding custom pages to wizard
+- Include ar (BSD variant) as alternative to dpkg
+- Utilize multiple packaging methods
+  - dpkg-deb
+  - bsdar
+  - ar (some errors in format)

@@ -1,0 +1,27 @@
+0.8.0
+- FIXES:
+  - Temporary staged directory not deleted if build fails
+  - Fixes for dialogs & saving working directory
+- NEW FEATURES:
+  - Build result dialog resizable
+  - Build result dialog shows more details
+  - Doxygen documentation
+  - Exception errors during build are caught & displayed
+  - Files list displays source directory as well as target
+  - Generate Makefile with 'setup.py' script
+  - Log window displayed when Logger level set to debug/3
+  - Project save/export:
+    - Projects can be saved in compressed/uncompressed formats:
+      - Uncompressed tar archive
+      - Gzip tar archive
+      - Bzip2 tar archive
+      - XZ tar archive
+      - Zip archive
+    - New project MIME type association: application/x-dbpz (.dbpz) format
+    - Legacy project (.dbp/plain text) support
+  - The system '/tmp' directory is used for staging project export & build prep
+  - Project is marked dirty when altered
+  - Option to preview & edit control file before build
+  - Only show quit confirmation when project is marked 'modified'
+- MISC:
+  - Rename log level argument value from 'warning' to 'warn'
