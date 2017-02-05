@@ -254,6 +254,7 @@ class MenuId(FieldId):
         FieldId.__init__(self)
         
         self.ACTION = self.NewId()
+        self.COMPRESS = self.NewId()
         self.EXIT = self.AddStaticId(wx.ID_EXIT)
         self.FILE = self.AddStaticId(wx.ID_FILE)
         self.NEW = self.AddStaticId(wx.ID_NEW)
