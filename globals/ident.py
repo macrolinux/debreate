@@ -248,6 +248,24 @@ class manid:
     MUTABLE = AddId(current_id)
 
 
+## IDs for menus
+class MenuId(FieldId):
+    def __init__(self):
+        FieldId.__init__(self)
+        
+        self.ACTION = self.NewId()
+        self.EXIT = self.AddStaticId(wx.ID_EXIT)
+        self.FILE = self.AddStaticId(wx.ID_FILE)
+        self.NEW = self.AddStaticId(wx.ID_NEW)
+        self.OPEN = self.AddStaticId(wx.ID_OPEN)
+        self.PAGE = self.NewId()
+        self.QBUILD = self.NewId()
+        self.SAVE = self.AddStaticId(wx.ID_SAVE)
+        self.SAVEAS = self.AddStaticId(wx.ID_SAVEAS)
+
+menuid = MenuId()
+
+
 ## IDs for choice/selection fields
 class SelId(FieldId):
     def __init__(self):
