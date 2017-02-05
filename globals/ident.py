@@ -253,9 +253,11 @@ class MenuId(FieldId):
     def __init__(self):
         FieldId.__init__(self)
         
+        self.ABOUT = self.AddStaticId(wx.ID_ABOUT)
         self.ACTION = self.NewId()
         self.COMPRESS = self.NewId()
-        self.DEBUG = self.New()
+        self.DEBUG = self.NewId()
+        self.DIST = self.NewId()
         self.EXIT = self.AddStaticId(wx.ID_EXIT)
         self.FILE = self.AddStaticId(wx.ID_FILE)
         self.HELP = self.AddStaticId(wx.ID_HELP)
@@ -266,6 +268,8 @@ class MenuId(FieldId):
         self.QBUILD = self.NewId()
         self.SAVE = self.AddStaticId(wx.ID_SAVE)
         self.SAVEAS = self.AddStaticId(wx.ID_SAVEAS)
+        self.TOOLTIPS = self.NewId()
+        self.UPDATE = self.NewId()
 
 menuid = MenuId()
 
