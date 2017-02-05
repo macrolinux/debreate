@@ -255,10 +255,13 @@ class MenuId(FieldId):
         
         self.ACTION = self.NewId()
         self.COMPRESS = self.NewId()
+        self.DEBUG = self.New()
         self.EXIT = self.AddStaticId(wx.ID_EXIT)
         self.FILE = self.AddStaticId(wx.ID_FILE)
+        self.HELP = self.AddStaticId(wx.ID_HELP)
         self.NEW = self.AddStaticId(wx.ID_NEW)
         self.OPEN = self.AddStaticId(wx.ID_OPEN)
+        self.OPTIONS = self.NewId()
         self.PAGE = self.NewId()
         self.QBUILD = self.NewId()
         self.SAVE = self.AddStaticId(wx.ID_SAVE)
