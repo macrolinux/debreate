@@ -255,6 +255,7 @@ class MenuId(FieldId):
         
         self.ABOUT = self.AddStaticId(wx.ID_ABOUT)
         self.ACTION = self.NewId()
+        self.ALIEN = self.NewId()
         self.COMPRESS = self.NewId()
         self.DEBUG = self.NewId()
         self.DIST = self.NewId()
