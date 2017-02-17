@@ -64,6 +64,8 @@ To run, launch the file named "init.py":
 ### [Links](#table-of-contents)
 * [Homepage](https://antumdeluge.github.io/debreate-web)
 * [GitHub project page](https://github.com/AntumDeluge/debreate)
+* [GitHub macrolinux](https://github.com/macrolinux/debreate)
+* [Gemfury project page](https://gemfury.com/beebox/deb:debreate)
 * [SourceForge project page](https://sourceforge.net/projects/debreate)
 * [PPA][ppa.debreate]
 * [Development PPA][ppa.debreate-dev]
