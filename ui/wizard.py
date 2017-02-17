@@ -54,7 +54,7 @@ class Wizard(wx.Panel):
         
         # A Header for the wizard
         pnl_title = wx.Panel(self, style=wx.RAISED_BORDER)
-        pnl_title.SetBackgroundColour((10, 47, 162))
+        pnl_title.SetBackgroundColour((79, 172, 221))
         
         # Text displayed from objects "name" - object.GetName()
         self.txt_title = wx.StaticText(pnl_title, label=GT(u'Title'))
