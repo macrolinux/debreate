@@ -40,7 +40,9 @@ These packages are recommended & enable some features:
 
 ### [Installation](#table-of-contents)
 
-The source uses a generic Makefile for "building" (because I don't know how to use [GNU Autotools][gnu-autotools] or [CMake][cmake] very well). The source is not actually built, but the Makefile simply installs the scripts onto the system. The plan is to eventually switch to the CMake build system, unless a better alternative is decided upon.
+Download deb file from [Gemfury project page](https://gemfury.com/beebox/deb:debreate), and use gdebi to install.
+
+![](bitmaps/install.png)
 
 #### Generating the Makefile
 
@@ -66,14 +68,6 @@ To run, launch the file named "init.py":
 ### [Links](#table-of-contents)
 * [GitHub macrolinux](https://github.com/macrolinux/debreate)
 * [Gemfury project page](https://gemfury.com/beebox/deb:debreate)
-
-
-### [Other Pages](#table-of-contents)
-* [OpenDesktop](https://www.opendesktop.org/content/show.php?content=101776)
-* [FreewareFiles](http://www.freewarefiles.com/Debreate_program_56557.html)
-* [alternativeTo](http://alternativeto.net/software/debreate/)
-
-
 
 [icon]: bitmaps/debreate64.png
 
