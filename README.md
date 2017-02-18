@@ -2,6 +2,8 @@
 
 ## Debreate - Debian Package Builder
 
+![](bitmaps/debreate.gif)
+
 
 ### Table of Contents
 * [Description](#description)
